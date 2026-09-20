@@ -82,8 +82,8 @@ a:hover { opacity: .78; }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(250px, .65fr);
-  gap: 80px;
+  grid-template-columns: minmax(0, 1.7fr) minmax(220px, .55fr);
+  gap: 56px;
   align-items: center;
   padding-top: 76px;
   padding-bottom: 82px;
@@ -99,9 +99,10 @@ a:hover { opacity: .78; }
 h1, h2, h3 { font-family: "Libre Baskerville", Georgia, serif; }
 h1 {
   margin: 0 0 17px;
-  font-size: clamp(3rem, 7vw, 5.4rem);
-  line-height: 1.04;
-  letter-spacing: -.05em;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.06;
+  letter-spacing: -.045em;
+  white-space: nowrap;
 }
 .role {
   margin: 0 0 25px;
@@ -124,6 +125,9 @@ h1 {
 }
 .contact-line a { text-decoration: none; }
 .portrait-frame {
+  width: 100%;
+  max-width: 280px;
+  justify-self: end;
   aspect-ratio: 4 / 5;
   background: linear-gradient(145deg, #edf2f5, #e0e8ee);
   border: 1px solid var(--line);
@@ -296,7 +300,7 @@ h1 {
 @media (max-width: 820px) {
   .section-nav { justify-content: flex-start; overflow-x: auto; white-space: nowrap; padding-bottom: 6px; }
   .hero { grid-template-columns: 1fr; gap: 38px; padding-top: 56px; }
-  .portrait-frame { width: min(360px, 100%); }
+  .portrait-frame { width: min(300px, 100%); justify-self: start; }
   .research-grid { grid-template-columns: 1fr; }
   .teaching-grid { grid-template-columns: 1fr; }
   .research-card { min-height: 0; }
@@ -307,7 +311,7 @@ h1 {
 @media (max-width: 560px) {
   .wrap { width: min(calc(100% - 28px), var(--max)); }
   .section-nav { gap: 17px; font-size: .84rem; }
-  h1 { font-size: 2.8rem; }
+  h1 { font-size: clamp(1.9rem, 10vw, 2.6rem); white-space: nowrap; }
   .hero { padding-top: 45px; padding-bottom: 58px; }
   .block { padding-top: 56px; padding-bottom: 56px; }
   .timeline-item { grid-template-columns: 78px 1fr; gap: 16px; }
