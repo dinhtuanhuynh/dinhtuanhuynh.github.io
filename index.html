@@ -3,147 +3,532 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Academic homepage of Dinh Tuan Huynh — research in complex geometry, Nevanlinna theory, and hyperbolicity.">
-  <title>Dinh Tuan Huynh</title>
+  <meta name="description" content="Academic homepage of Dinh Tuan Huynh (Huỳnh Đình Tuân), University of Education, Hue University.">
+  <title>Dinh Tuan Huynh | Mathematics</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top">Dinh Tuan Huynh</a>
-      <nav aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="site-mark" href="#top" aria-label="Home">DTH</a>
+      <div class="language-switch" aria-label="Language">
+        <button class="lang-btn active" id="btn-en" type="button" onclick="setLanguage('en')">English</button>
+        <button class="lang-btn" id="btn-vi" type="button" onclick="setLanguage('vi')">Tiếng Việt</button>
+      </div>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">Mathematics · Complex Geometry</p>
+    <!-- ENGLISH -->
+    <div id="page-en" class="language-page">
+      <nav class="section-nav wrap" aria-label="English navigation">
+        <a href="#en-research">Research</a>
+        <a href="#en-education">Education</a>
+        <a href="#en-employment">Affiliation</a>
+        <a href="#en-teaching">Teaching</a>
+        <a href="#en-preprints">Preprints</a>
+        <a href="#en-publications">Publications</a>
+      </nav>
+
+      <section class="hero wrap">
+        <div class="hero-copy">
+          <p class="discipline">Complex Geometry &amp; Nevanlinna Theory</p>
           <h1>Dinh Tuan Huynh</h1>
-          <p class="lead">
-            I work in complex geometry and value distribution theory, with particular interest in
-            Nevanlinna theory, hyperbolicity, Second Main Theorems, and holomorphic curves.
+          <p class="role">Department of Mathematics · University of Education, Hue University</p>
+          <p class="intro">
+            My research lies in complex geometry and value distribution theory, with emphasis on
+            Nevanlinna theory, complex hyperbolicity, Second Main Theorems, holomorphic curves,
+            and related problems in algebraic geometry.
           </p>
-          <div class="hero-links">
-            <a class="button primary" href="#research">Research</a>
-            <a class="button" href="https://github.com/dinhtuanhuynh">GitHub</a>
+          <div class="contact-line">
+            <span>Hue City, Vietnam</span>
+            <a href="mailto:dinhtuanhuynh@hueuni.edu.vn">dinhtuanhuynh@hueuni.edu.vn</a>
+            <a href="https://github.com/dinhtuanhuynh">GitHub</a>
           </div>
         </div>
-        <aside class="profile-card" aria-label="Profile summary">
-          <div class="avatar" aria-hidden="true">DH</div>
-          <p><strong>Affiliation</strong><br><span class="muted">Add your institution / department</span></p>
-          <p><strong>Email</strong><br><span class="muted">Add your academic email</span></p>
-          <p><strong>Links</strong><br>
-            <a href="https://github.com/dinhtuanhuynh">GitHub</a>
-            <span class="dot">·</span>
-            <span class="muted">Google Scholar</span>
-            <span class="dot">·</span>
-            <span class="muted">CV</span>
-          </p>
-        </aside>
-      </div>
-    </section>
+        <div class="portrait-frame" aria-label="Profile photograph">
+          <img src="profile.jpg" alt="Dinh Tuan Huynh" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <div class="portrait-fallback">DTH</div>
+        </div>
+      </section>
 
-    <section id="about" class="section">
-      <div class="container narrow">
-        <p class="section-kicker">About</p>
-        <h2>Mathematics at the interface of geometry and value distribution</h2>
-        <p>
-          My research concerns holomorphic curves, value distribution theory, and complex
-          hyperbolicity. I am especially interested in sharp and effective forms of Second Main
-          Theorems, geometric applications of Nevanlinna theory, and hyperbolicity problems in
-          projective and almost-complex settings.
-        </p>
-      </div>
-    </section>
-
-    <section id="research" class="section alt">
-      <div class="container">
-        <p class="section-kicker">Research</p>
-        <h2>Current themes</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Nevanlinna theory</h3>
-            <p>Second Main Theorems for hypersurfaces, truncation problems, subgeneral position, and quantitative value distribution.</p>
+      <section id="en-research" class="block wrap">
+        <div class="section-heading">
+          <p class="overline">Research Directions</p>
+          <h2>Current themes</h2>
+          <p>Three themes organize much of my current work in complex geometry and value distribution.</p>
+        </div>
+        <div class="research-grid">
+          <article class="research-card">
+            <span class="number">01</span>
+            <h3>Complex Hyperbolicity</h3>
+            <p>Kobayashi hyperbolicity · Hyperbolic hypersurfaces · Hyperbolic complements · Deformation methods</p>
           </article>
-          <article class="card">
-            <h3>Complex hyperbolicity</h3>
-            <p>Kobayashi hyperbolicity, hyperbolic hypersurfaces and complements, deformation methods, and explicit low-degree constructions.</p>
+          <article class="research-card">
+            <span class="number">02</span>
+            <h3>Nevanlinna Theory</h3>
+            <p>Second Main Theorems · Hypersurfaces · Truncation · Subgeneral position · Defect relations</p>
           </article>
-          <article class="card">
-            <h3>Holomorphic curves</h3>
-            <p>Entire curves in projective and arithmetic-geometric settings, with connections to Grassmannians, Shimura varieties, and almost-complex geometry.</p>
+          <article class="research-card">
+            <span class="number">03</span>
+            <h3>Holomorphic Curves &amp; Complex Geometry</h3>
+            <p>Entire curves · Jet differentials · Ahlfors currents · Projective and almost-complex geometry</p>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="publications" class="section">
-      <div class="container">
-        <p class="section-kicker">Publications</p>
-        <h2>Selected work</h2>
-        <div class="notice">
-          <strong>Add your publication list here.</strong>
-          <p>
-            A clean format is: Author(s), “Title,” <em>Journal</em> volume (year), pages.
-            You can also link each title to arXiv or the journal page.
-          </p>
+      <section id="en-education" class="block wrap two-column-section">
+        <div class="section-heading compact">
+          <p class="overline">Education</p>
+          <h2>Academic training</h2>
         </div>
-        <ol class="pub-list">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2016</div>
+            <div>
+              <h3>Ph.D. in Mathematics</h3>
+              <p>Université Paris-Sud, France</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="en-employment" class="block wrap two-column-section">
+        <div class="section-heading compact">
+          <p class="overline">Affiliation</p>
+          <h2>Current position</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Present</div>
+            <div>
+              <h3>Department of Mathematics</h3>
+              <p>University of Education, Hue University · Hue City, Vietnam</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="en-teaching" class="block wrap">
+        <div class="section-heading">
+          <p class="overline">Teaching</p>
+          <h2>Teaching plan</h2>
+          <p>Weekly class schedule for the current semester.</p>
+        </div>
+
+        <div class="teaching-grid">
+          <article class="course-card">
+            <h3>Linear Algebra I</h3>
+            <div class="class-schedule">
+              <div class="class-row">
+                <div class="class-name">Class A</div>
+                <div class="class-time">Monday, 15:00–18:00</div>
+                <div class="class-room">Room P.II.2</div>
+              </div>
+              <div class="class-row">
+                <div class="class-name">Class B</div>
+                <div class="class-time">Wednesday, 15:00–18:00</div>
+                <div class="class-room">Room P.II.2</div>
+              </div>
+              <div class="class-row">
+                <div class="class-name">Class C</div>
+                <div class="class-time">Thursday, 15:00–18:00</div>
+                <div class="class-room">Room P.III.2</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card">
+            <h3>Calculus I</h3>
+            <div class="class-schedule">
+              <div class="class-row multi-slot">
+                <div class="class-name">Class A</div>
+                <div class="class-time">
+                  <span>Tuesday, 15:00–17:00</span>
+                  <span>Thursday, 13:00–15:00</span>
+                </div>
+                <div class="class-room">
+                  <span>Room P.II.2</span>
+                  <span>Room P.III.2</span>
+                </div>
+              </div>
+              <div class="class-row multi-slot">
+                <div class="class-name">Class B</div>
+                <div class="class-time">
+                  <span>Monday, 13:00–15:00</span>
+                  <span>Wednesday, 13:00–15:00</span>
+                </div>
+                <div class="class-room">
+                  <span>Room P.II.2</span>
+                  <span>Room P.II.2</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="en-preprints" class="block wrap">
+        <div class="section-heading">
+          <p class="overline">Preprints</p>
+          <h2>Recent manuscripts</h2>
+        </div>
+        <ol class="paper-list">
           <li>
-            <span class="pub-title">Publication title</span><br>
-            <span class="muted">Authors · Journal / arXiv · Year</span>
+            <h3>A Second Main Theorem for Entire Curves Intersecting Three Conics</h3>
+            <p class="authors">Lei Hou, <strong>Dinh Tuan Huynh</strong>, Joël Merker, Song-Yan Xie</p>
+            <p class="paper-links"><a href="https://arxiv.org/abs/2512.03948">arXiv:2512.03948</a></p>
           </li>
           <li>
-            <span class="pub-title">Publication title</span><br>
-            <span class="muted">Authors · Journal / arXiv · Year</span>
+            <h3>Vanishing of Invariant 2-Jet Differentials and Improved Hyperbolicity Degree Bounds in Dimension Two</h3>
+            <p class="authors">Lei Hou, <strong>Dinh Tuan Huynh</strong>, Joël Merker, Song-Yan Xie</p>
+            <p class="paper-links"><a href="https://arxiv.org/abs/2603.14881">arXiv:2603.14881</a></p>
+          </li>
+          <li>
+            <h3>A <em>p</em>-adic Second Main Theorem</h3>
+            <p class="authors"><strong>Dinh Tuan Huynh</strong></p>
+            <p class="paper-links"><a href="https://arxiv.org/abs/2405.14197">arXiv:2405.14197</a></p>
+          </li>
+          <li>
+            <h3>Holomorphic mappings of maximal rank into projective spaces</h3>
+            <p class="authors"><strong>Dinh Tuan Huynh</strong></p>
+            <p class="paper-links"><a href="https://arxiv.org/abs/2306.14743">arXiv:2306.14743</a></p>
           </li>
         </ol>
-      </div>
-    </section>
+      </section>
 
-    <section id="teaching" class="section alt">
-      <div class="container narrow">
-        <p class="section-kicker">Teaching</p>
-        <h2>Courses and supervision</h2>
-        <p class="muted">
-          Add current and past courses, lecture notes, seminar information, and student supervision here.
-        </p>
-      </div>
-    </section>
+      <section id="en-publications" class="block wrap">
+        <div class="section-heading">
+          <p class="overline">Publications</p>
+          <h2>Selected publications</h2>
+        </div>
+        <ol class="paper-list">
+          <li>
+            <h3>Entire holomorphic curves into ℙ<sup>n</sup>(ℂ) intersecting n + 1 general hypersurfaces</h3>
+            <p class="authors">Zhangchi Chen, <strong>Dinh Tuan Huynh</strong>, Ruiran Sun, Song-Yan Xie</p>
+            <p class="venue">Science China Mathematics 68 (2025), 2847–2866.</p>
+            <p class="paper-links"><a href="https://doi.org/10.1007/s11425-023-2402-0">DOI</a></p>
+          </li>
+          <li>
+            <h3>Some line and conic arrangements and their Waldschmidt constants</h3>
+            <p class="authors"><strong>Dinh Tuan Huynh</strong>, Tran N. K. Linh, Le Ngoc Long</p>
+            <p class="venue">Journal of the Korean Mathematical Society 62 (2025), 1397–1426.</p>
+            <p class="paper-links"><a href="https://doi.org/10.4134/JKMS.j240438">DOI</a></p>
+          </li>
+          <li>
+            <h3>Big Picard theorem for jet differentials and non-archimedean Ax-Lindemann theorem</h3>
+            <p class="authors"><strong>Dinh Tuan Huynh</strong>, Ruiran Sun, Song-Yan Xie</p>
+            <p class="venue">Journal of Number Theory 253 (2023), 257–277.</p>
+          </li>
+          <li>
+            <h3>Universal entire curves in projective spaces with slow growth</h3>
+            <p class="authors">Zhangchi Chen, <strong>Dinh Tuan Huynh</strong>, Song-Yan Xie</p>
+            <p class="venue">Journal of Geometric Analysis 33 (2023), Paper No. 308.</p>
+          </li>
+          <li>
+            <h3>On the Weyl–Ahlfors theory of derived curves</h3>
+            <p class="authors"><strong>Dinh Tuan Huynh</strong>, Song-Yan Xie</p>
+            <p class="venue">Mathematische Zeitschrift 300 (2022), 475–491.</p>
+          </li>
+          <li>
+            <h3>On Ahlfors currents</h3>
+            <p class="authors"><strong>Dinh Tuan Huynh</strong>, Song-Yan Xie</p>
+            <p class="venue">Journal de Mathématiques Pures et Appliquées 156 (2021), 307–327.</p>
+          </li>
+          <li>
+            <h3>Entire holomorphic curves into projective spaces intersecting a generic hypersurface of high degree</h3>
+            <p class="authors"><strong>Dinh Tuan Huynh</strong>, Duc-Viet Vu, Song-Yan Xie</p>
+            <p class="venue">Annales de l'Institut Fourier 69 (2019), 653–671.</p>
+          </li>
+          <li>
+            <h3>A geometric second main theorem</h3>
+            <p class="authors">Julien Duval, <strong>Dinh Tuan Huynh</strong></p>
+            <p class="venue">Mathematische Annalen 370 (2018), 1799–1804.</p>
+          </li>
+          <li>
+            <h3>Examples of Hyperbolic Hypersurfaces of Low Degree in Projective Spaces</h3>
+            <p class="authors"><strong>Dinh Tuan Huynh</strong></p>
+            <p class="venue">International Mathematics Research Notices 2016, 5518–5558.</p>
+            <p class="paper-links"><a href="https://doi.org/10.1093/imrn/rnv306">DOI</a></p>
+          </li>
+        </ol>
+      </section>
 
-    <section id="contact" class="section">
-      <div class="container narrow">
-        <p class="section-kicker">Contact</p>
-        <h2>Get in touch</h2>
-        <p>
-          For research correspondence, add your preferred academic email address here.
-          You can also find my public code and projects on
-          <a href="https://github.com/dinhtuanhuynh">GitHub</a>.
-        </p>
-      </div>
-    </section>
+      <footer class="footer wrap">
+        <span>© <span class="year"></span> Dinh Tuan Huynh</span>
+        <a href="mailto:dinhtuanhuynh@hueuni.edu.vn">dinhtuanhuynh@hueuni.edu.vn</a>
+      </footer>
+    </div>
+
+    <!-- VIETNAMESE -->
+    <div id="page-vi" class="language-page" hidden>
+      <nav class="section-nav wrap" aria-label="Điều hướng tiếng Việt">
+        <a href="#vi-research">Nghiên cứu</a>
+        <a href="#vi-education">Đào tạo</a>
+        <a href="#vi-employment">Công tác</a>
+        <a href="#vi-teaching">Lịch dạy</a>
+        <a href="#vi-preprints">Tiền ấn phẩm</a>
+        <a href="#vi-publications">Công bố</a>
+      </nav>
+
+      <section class="hero wrap">
+        <div class="hero-copy">
+          <p class="discipline">Hình học phức &amp; Lý thuyết Nevanlinna</p>
+          <h1>Huỳnh Đình Tuân</h1>
+          <p class="role">Khoa Toán · Trường Đại học Sư phạm, Đại học Huế</p>
+          <p class="intro">
+            Hướng nghiên cứu của tôi tập trung vào hình học phức và lý thuyết phân bố giá trị,
+            đặc biệt là lý thuyết Nevanlinna, tính hyperbolic phức, các Định lý Chính Thứ hai,
+            đường cong chỉnh hình và những bài toán liên quan trong hình học đại số.
+          </p>
+          <div class="contact-line">
+            <span>Huế, Việt Nam</span>
+            <a href="mailto:dinhtuanhuynh@hueuni.edu.vn">dinhtuanhuynh@hueuni.edu.vn</a>
+            <a href="https://github.com/dinhtuanhuynh">GitHub</a>
+          </div>
+        </div>
+        <div class="portrait-frame" aria-label="Ảnh cá nhân">
+          <img src="profile.jpg" alt="Huỳnh Đình Tuân" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <div class="portrait-fallback">HĐT</div>
+        </div>
+      </section>
+
+      <section id="vi-research" class="block wrap">
+        <div class="section-heading">
+          <p class="overline">Hướng nghiên cứu</p>
+          <h2>Các chủ đề hiện nay</h2>
+          <p>Ba hướng chính trong các nghiên cứu gần đây của tôi về hình học phức và lý thuyết phân bố giá trị.</p>
+        </div>
+        <div class="research-grid">
+          <article class="research-card">
+            <span class="number">01</span>
+            <h3>Tính hyperbolic phức</h3>
+            <p>Tính hyperbolic Kobayashi · Siêu mặt hyperbolic · Phần bù hyperbolic · Phương pháp biến dạng</p>
+          </article>
+          <article class="research-card">
+            <span class="number">02</span>
+            <h3>Lý thuyết Nevanlinna</h3>
+            <p>Định lý Chính Thứ hai · Siêu mặt · Cắt ngọn · Vị trí dưới tổng quát · Quan hệ defect</p>
+          </article>
+          <article class="research-card">
+            <span class="number">03</span>
+            <h3>Đường cong chỉnh hình &amp; Hình học phức</h3>
+            <p>Đường cong nguyên · Vi phân jet · Dòng Ahlfors · Hình học xạ ảnh và hình học gần phức</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="vi-education" class="block wrap two-column-section">
+        <div class="section-heading compact">
+          <p class="overline">Đào tạo</p>
+          <h2>Quá trình học tập</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2016</div>
+            <div>
+              <h3>Tiến sĩ Toán học</h3>
+              <p>Université Paris-Sud, Pháp</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="vi-employment" class="block wrap two-column-section">
+        <div class="section-heading compact">
+          <p class="overline">Công tác</p>
+          <h2>Đơn vị hiện tại</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Hiện nay</div>
+            <div>
+              <h3>Khoa Toán</h3>
+              <p>Trường Đại học Sư phạm, Đại học Huế · Huế, Việt Nam</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="vi-teaching" class="block wrap">
+        <div class="section-heading">
+          <p class="overline">Giảng dạy</p>
+          <h2>Lịch dạy</h2>
+          <p>Lịch học hằng tuần trong học kỳ hiện tại.</p>
+        </div>
+
+        <div class="teaching-grid">
+          <article class="course-card">
+            <h3>Đại số tuyến tính I</h3>
+            <div class="class-schedule">
+              <div class="class-row">
+                <div class="class-name">Lớp A</div>
+                <div class="class-time">15h–18h thứ hai hằng tuần</div>
+                <div class="class-room">Phòng P.II.2</div>
+              </div>
+              <div class="class-row">
+                <div class="class-name">Lớp B</div>
+                <div class="class-time">15h–18h thứ tư hằng tuần</div>
+                <div class="class-room">Phòng P.II.2</div>
+              </div>
+              <div class="class-row">
+                <div class="class-name">Lớp C</div>
+                <div class="class-time">15h–18h thứ năm hằng tuần</div>
+                <div class="class-room">Phòng P.III.2</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card">
+            <h3>Giải tích I</h3>
+            <div class="class-schedule">
+              <div class="class-row multi-slot">
+                <div class="class-name">Lớp A</div>
+                <div class="class-time">
+                  <span>15h–17h thứ ba hằng tuần</span>
+                  <span>13h–15h thứ năm hằng tuần</span>
+                </div>
+                <div class="class-room">
+                  <span>Phòng P.II.2</span>
+                  <span>Phòng P.III.2</span>
+                </div>
+              </div>
+              <div class="class-row multi-slot">
+                <div class="class-name">Lớp B</div>
+                <div class="class-time">
+                  <span>13h–15h thứ hai hằng tuần</span>
+                  <span>13h–15h thứ tư hằng tuần</span>
+                </div>
+                <div class="class-room">
+                  <span>Phòng P.II.2</span>
+                  <span>Phòng P.II.2</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="vi-preprints" class="block wrap">
+        <div class="section-heading">
+          <p class="overline">Tiền ấn phẩm</p>
+          <h2>Các bản thảo gần đây</h2>
+        </div>
+        <ol class="paper-list">
+          <li>
+            <h3>A Second Main Theorem for Entire Curves Intersecting Three Conics</h3>
+            <p class="authors">Lei Hou, <strong>Dinh Tuan Huynh</strong>, Joël Merker, Song-Yan Xie</p>
+            <p class="paper-links"><a href="https://arxiv.org/abs/2512.03948">arXiv:2512.03948</a></p>
+          </li>
+          <li>
+            <h3>Vanishing of Invariant 2-Jet Differentials and Improved Hyperbolicity Degree Bounds in Dimension Two</h3>
+            <p class="authors">Lei Hou, <strong>Dinh Tuan Huynh</strong>, Joël Merker, Song-Yan Xie</p>
+            <p class="paper-links"><a href="https://arxiv.org/abs/2603.14881">arXiv:2603.14881</a></p>
+          </li>
+          <li>
+            <h3>A <em>p</em>-adic Second Main Theorem</h3>
+            <p class="authors"><strong>Dinh Tuan Huynh</strong></p>
+            <p class="paper-links"><a href="https://arxiv.org/abs/2405.14197">arXiv:2405.14197</a></p>
+          </li>
+          <li>
+            <h3>Holomorphic mappings of maximal rank into projective spaces</h3>
+            <p class="authors"><strong>Dinh Tuan Huynh</strong></p>
+            <p class="paper-links"><a href="https://arxiv.org/abs/2306.14743">arXiv:2306.14743</a></p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="vi-publications" class="block wrap">
+        <div class="section-heading">
+          <p class="overline">Công bố</p>
+          <h2>Một số công trình</h2>
+        </div>
+        <ol class="paper-list">
+          <li>
+            <h3>Entire holomorphic curves into ℙ<sup>n</sup>(ℂ) intersecting n + 1 general hypersurfaces</h3>
+            <p class="authors">Zhangchi Chen, <strong>Dinh Tuan Huynh</strong>, Ruiran Sun, Song-Yan Xie</p>
+            <p class="venue">Science China Mathematics 68 (2025), 2847–2866.</p>
+            <p class="paper-links"><a href="https://doi.org/10.1007/s11425-023-2402-0">DOI</a></p>
+          </li>
+          <li>
+            <h3>Some line and conic arrangements and their Waldschmidt constants</h3>
+            <p class="authors"><strong>Dinh Tuan Huynh</strong>, Tran N. K. Linh, Le Ngoc Long</p>
+            <p class="venue">Journal of the Korean Mathematical Society 62 (2025), 1397–1426.</p>
+            <p class="paper-links"><a href="https://doi.org/10.4134/JKMS.j240438">DOI</a></p>
+          </li>
+          <li>
+            <h3>Big Picard theorem for jet differentials and non-archimedean Ax-Lindemann theorem</h3>
+            <p class="authors"><strong>Dinh Tuan Huynh</strong>, Ruiran Sun, Song-Yan Xie</p>
+            <p class="venue">Journal of Number Theory 253 (2023), 257–277.</p>
+          </li>
+          <li>
+            <h3>Universal entire curves in projective spaces with slow growth</h3>
+            <p class="authors">Zhangchi Chen, <strong>Dinh Tuan Huynh</strong>, Song-Yan Xie</p>
+            <p class="venue">Journal of Geometric Analysis 33 (2023), Paper No. 308.</p>
+          </li>
+          <li>
+            <h3>On the Weyl–Ahlfors theory of derived curves</h3>
+            <p class="authors"><strong>Dinh Tuan Huynh</strong>, Song-Yan Xie</p>
+            <p class="venue">Mathematische Zeitschrift 300 (2022), 475–491.</p>
+          </li>
+          <li>
+            <h3>On Ahlfors currents</h3>
+            <p class="authors"><strong>Dinh Tuan Huynh</strong>, Song-Yan Xie</p>
+            <p class="venue">Journal de Mathématiques Pures et Appliquées 156 (2021), 307–327.</p>
+          </li>
+          <li>
+            <h3>Entire holomorphic curves into projective spaces intersecting a generic hypersurface of high degree</h3>
+            <p class="authors"><strong>Dinh Tuan Huynh</strong>, Duc-Viet Vu, Song-Yan Xie</p>
+            <p class="venue">Annales de l'Institut Fourier 69 (2019), 653–671.</p>
+          </li>
+          <li>
+            <h3>A geometric second main theorem</h3>
+            <p class="authors">Julien Duval, <strong>Dinh Tuan Huynh</strong></p>
+            <p class="venue">Mathematische Annalen 370 (2018), 1799–1804.</p>
+          </li>
+          <li>
+            <h3>Examples of Hyperbolic Hypersurfaces of Low Degree in Projective Spaces</h3>
+            <p class="authors"><strong>Dinh Tuan Huynh</strong></p>
+            <p class="venue">International Mathematics Research Notices 2016, 5518–5558.</p>
+            <p class="paper-links"><a href="https://doi.org/10.1093/imrn/rnv306">DOI</a></p>
+          </li>
+        </ol>
+      </section>
+
+      <footer class="footer wrap">
+        <span>© <span class="year"></span> Huỳnh Đình Tuân</span>
+        <a href="mailto:dinhtuanhuynh@hueuni.edu.vn">dinhtuanhuynh@hueuni.edu.vn</a>
+      </footer>
+    </div>
   </main>
 
-  <footer>
-    <div class="container footer-wrap">
-      <span>© <span id="year">2026</span> Dinh Tuan Huynh</span>
-      <span>Hosted on GitHub Pages</span>
-    </div>
-  </footer>
-
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    function setLanguage(lang) {
+      const en = document.getElementById('page-en');
+      const vi = document.getElementById('page-vi');
+      const enBtn = document.getElementById('btn-en');
+      const viBtn = document.getElementById('btn-vi');
+
+      const isVi = lang === 'vi';
+      en.hidden = isVi;
+      vi.hidden = !isVi;
+      enBtn.classList.toggle('active', !isVi);
+      viBtn.classList.toggle('active', isVi);
+      document.documentElement.lang = isVi ? 'vi' : 'en';
+      document.title = isVi ? 'Huỳnh Đình Tuân | Toán học' : 'Dinh Tuan Huynh | Mathematics';
+      localStorage.setItem('preferredLanguage', lang);
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+
+    document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    if (savedLanguage === 'vi') setLanguage('vi');
   </script>
 </body>
 </html>
+
