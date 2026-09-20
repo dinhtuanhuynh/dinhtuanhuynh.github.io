@@ -227,6 +227,34 @@ h1 {
 .class-time span, .class-room span { display: block; }
 .class-time span + span, .class-room span + span { margin-top: 7px; }
 
+
+.seminar-table {
+  width: 100%;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.seminar-row {
+  display: grid;
+  grid-template-columns: 150px minmax(190px, 1.1fr) minmax(260px, 1.7fr) 180px;
+  border-bottom: 1px solid var(--line);
+}
+.seminar-row:last-child { border-bottom: 0; }
+.seminar-row > div {
+  padding: 17px 18px;
+  min-width: 0;
+  border-right: 1px solid var(--line);
+}
+.seminar-row > div:last-child { border-right: 0; }
+.seminar-head {
+  background: var(--accent-soft);
+  color: var(--ink);
+  font-weight: 700;
+}
+.seminar-row:not(.seminar-head) > div { color: var(--muted); }
+.seminar-row:not(.seminar-head) > div:nth-child(2) { color: var(--ink); font-weight: 600; }
+
 .paper-list {
   margin: 0;
   padding-left: 1.45rem;
@@ -284,6 +312,31 @@ h1 {
   .block { padding-top: 56px; padding-bottom: 56px; }
   .timeline-item { grid-template-columns: 78px 1fr; gap: 16px; }
   .class-row { grid-template-columns: 1fr; gap: 5px; }
+  .seminar-table { border: 0; background: transparent; overflow: visible; }
+  .seminar-head { display: none; }
+  .seminar-row {
+    display: block;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    margin-bottom: 14px;
+  }
+  .seminar-row > div {
+    display: grid;
+    grid-template-columns: 105px 1fr;
+    gap: 12px;
+    padding: 12px 14px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .seminar-row > div:last-child { border-bottom: 0; }
+  .seminar-row > div::before {
+    content: attr(data-label);
+    color: var(--muted);
+    font-weight: 700;
+    font-size: .84rem;
+  }
+
   .class-time span + span, .class-room span + span { margin-top: 4px; }
   .footer { flex-direction: column; }
 }
