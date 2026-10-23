@@ -10,46 +10,88 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Conference section: five-column table, responsive on smaller screens */
-    .conference-table {
+    /* Conference section: compact conference information + detailed schedule */
+    .conference-meta {
+      display: grid;
+      grid-template-columns: 2fr 1.15fr 1.35fr;
+      border: 1px solid rgba(24, 34, 45, 0.12);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      margin-bottom: 1.5rem;
+    }
+    .conference-meta-item {
+      padding: 1rem 1.1rem;
+      min-width: 0;
+      border-left: 1px solid rgba(24, 34, 45, 0.08);
+    }
+    .conference-meta-item:first-child { border-left: 0; }
+    .conference-meta-label {
+      display: block;
+      margin-bottom: 0.28rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.66;
+    }
+    .conference-meta-value {
+      font-weight: 600;
+      line-height: 1.45;
+    }
+    .conference-schedule-title {
+      margin: 0 0 0.8rem;
+      font-family: "Noto Serif", serif;
+      font-size: 1.35rem;
+    }
+    .conference-schedule-table {
       width: 100%;
       border: 1px solid rgba(24, 34, 45, 0.12);
       border-radius: 12px;
       overflow: hidden;
       background: #fff;
     }
-    .conference-row {
+    .conference-schedule-row {
       display: grid;
-      grid-template-columns: 1.45fr 1fr 1.25fr 1.1fr 1.15fr;
+      grid-template-columns: 1.05fr 1.55fr 2.8fr 1.25fr;
       gap: 0;
       border-top: 1px solid rgba(24, 34, 45, 0.10);
     }
-    .conference-row:first-child { border-top: 0; }
-    .conference-row > div {
+    .conference-schedule-row:first-child { border-top: 0; }
+    .conference-schedule-row > div {
       padding: 0.9rem 1rem;
       min-width: 0;
       border-left: 1px solid rgba(24, 34, 45, 0.08);
+      line-height: 1.45;
     }
-    .conference-row > div:first-child { border-left: 0; }
-    .conference-head {
+    .conference-schedule-row > div:first-child { border-left: 0; }
+    .conference-schedule-head {
       font-weight: 700;
       background: rgba(24, 34, 45, 0.045);
     }
-    .conference-table a { word-break: break-word; }
+    .conference-schedule-table a { word-break: break-word; }
     @media (max-width: 820px) {
-      .conference-head { display: none; }
-      .conference-row {
+      .conference-meta {
+        grid-template-columns: 1fr;
+      }
+      .conference-meta-item {
+        border-left: 0;
+        border-top: 1px solid rgba(24, 34, 45, 0.08);
+      }
+      .conference-meta-item:first-child { border-top: 0; }
+      .conference-schedule-head { display: none; }
+      .conference-schedule-row {
         display: block;
         padding: 0.35rem 0;
       }
-      .conference-row > div {
+      .conference-schedule-row > div {
         display: grid;
         grid-template-columns: 8.5rem 1fr;
         gap: 0.7rem;
         border-left: 0;
         padding: 0.48rem 0.9rem;
       }
-      .conference-row > div::before {
+      .conference-schedule-row > div::before {
         content: attr(data-label);
         font-weight: 700;
       }
@@ -294,26 +336,44 @@
         <div class="section-heading">
           <p class="overline">Conference</p>
           <h2>Conference</h2>
-          <p>Upcoming and recent conferences.</p>
+          <p>Conference information and detailed programme.</p>
         </div>
-        <div class="conference-table" role="table" aria-label="Conference schedule">
-          <div class="conference-row conference-head" role="row">
-            <div role="columnheader">Name</div>
+
+        <!-- EDIT ENGLISH CONFERENCE INFORMATION BELOW -->
+        <div class="conference-meta" aria-label="Conference information">
+          <div class="conference-meta-item">
+            <span class="conference-meta-label">Name</span>
+            <div class="conference-meta-value">To be announced</div>
+          </div>
+          <div class="conference-meta-item">
+            <span class="conference-meta-label">Time</span>
+            <div class="conference-meta-value">To be announced</div>
+          </div>
+          <div class="conference-meta-item">
+            <span class="conference-meta-label">Venue</span>
+            <div class="conference-meta-value">To be announced</div>
+          </div>
+        </div>
+        <!-- EDIT ENGLISH CONFERENCE INFORMATION ABOVE -->
+
+        <h3 class="conference-schedule-title">Schedule</h3>
+        <div class="conference-schedule-table" role="table" aria-label="Conference schedule">
+          <div class="conference-schedule-row conference-schedule-head" role="row">
             <div role="columnheader">Time</div>
-            <div role="columnheader">Venue</div>
+            <div role="columnheader">Title</div>
+            <div role="columnheader">Abstract</div>
             <div role="columnheader">Speaker</div>
-            <div role="columnheader">Schedule</div>
           </div>
 
-          <!-- EDIT ENGLISH CONFERENCE ROWS BELOW -->
-          <div class="conference-row" role="row">
-            <div data-label="Name" role="cell">To be announced</div>
+          <!-- EDIT ENGLISH CONFERENCE SCHEDULE ROWS BELOW -->
+          <div class="conference-schedule-row" role="row">
             <div data-label="Time" role="cell">To be announced</div>
-            <div data-label="Venue" role="cell">To be announced</div>
+            <div data-label="Title" role="cell">To be announced</div>
+            <div data-label="Abstract" role="cell">To be announced</div>
             <div data-label="Speaker" role="cell">To be announced</div>
-            <div data-label="Schedule" role="cell">To be announced</div>
           </div>
-          <!-- EDIT ENGLISH CONFERENCE ROWS ABOVE -->
+          <!-- Copy the row above to add more talks. -->
+          <!-- EDIT ENGLISH CONFERENCE SCHEDULE ROWS ABOVE -->
         </div>
       </section>
       <section id="en-preprints" class="block wrap">
@@ -682,26 +742,44 @@
         <div class="section-heading">
           <p class="overline">Hội nghị</p>
           <h2>Hội nghị</h2>
-          <p>Các hội nghị sắp tới và gần đây.</p>
+          <p>Thông tin hội nghị và chương trình chi tiết.</p>
         </div>
-        <div class="conference-table" role="table" aria-label="Lịch hội nghị">
-          <div class="conference-row conference-head" role="row">
-            <div role="columnheader">Tên hội nghị</div>
+
+        <!-- EDIT VIETNAMESE CONFERENCE INFORMATION BELOW -->
+        <div class="conference-meta" aria-label="Thông tin hội nghị">
+          <div class="conference-meta-item">
+            <span class="conference-meta-label">Tên hội nghị</span>
+            <div class="conference-meta-value">Sẽ cập nhật</div>
+          </div>
+          <div class="conference-meta-item">
+            <span class="conference-meta-label">Thời gian</span>
+            <div class="conference-meta-value">Sẽ cập nhật</div>
+          </div>
+          <div class="conference-meta-item">
+            <span class="conference-meta-label">Địa điểm</span>
+            <div class="conference-meta-value">Sẽ cập nhật</div>
+          </div>
+        </div>
+        <!-- EDIT VIETNAMESE CONFERENCE INFORMATION ABOVE -->
+
+        <h3 class="conference-schedule-title">Chương trình</h3>
+        <div class="conference-schedule-table" role="table" aria-label="Chương trình hội nghị">
+          <div class="conference-schedule-row conference-schedule-head" role="row">
             <div role="columnheader">Thời gian</div>
-            <div role="columnheader">Địa điểm</div>
+            <div role="columnheader">Tiêu đề</div>
+            <div role="columnheader">Tóm tắt</div>
             <div role="columnheader">Báo cáo viên</div>
-            <div role="columnheader">Chương trình</div>
           </div>
 
-          <!-- EDIT VIETNAMESE CONFERENCE ROWS BELOW -->
-          <div class="conference-row" role="row">
-            <div data-label="Tên hội nghị" role="cell">Sẽ cập nhật</div>
+          <!-- EDIT VIETNAMESE CONFERENCE SCHEDULE ROWS BELOW -->
+          <div class="conference-schedule-row" role="row">
             <div data-label="Thời gian" role="cell">Sẽ cập nhật</div>
-            <div data-label="Địa điểm" role="cell">Sẽ cập nhật</div>
+            <div data-label="Tiêu đề" role="cell">Sẽ cập nhật</div>
+            <div data-label="Tóm tắt" role="cell">Sẽ cập nhật</div>
             <div data-label="Báo cáo viên" role="cell">Sẽ cập nhật</div>
-            <div data-label="Chương trình" role="cell">Sẽ cập nhật</div>
           </div>
-          <!-- EDIT VIETNAMESE CONFERENCE ROWS ABOVE -->
+          <!-- Sao chép hàng trên để thêm báo cáo mới. -->
+          <!-- EDIT VIETNAMESE CONFERENCE SCHEDULE ROWS ABOVE -->
         </div>
       </section>
       <section id="vi-preprints" class="block wrap">
